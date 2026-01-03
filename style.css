@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #0a2540, #1e3c72);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Player Card */
+.player {
+    background: #ffffff;
+    width: 320px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+/* Album Cover */
+.cover img {
+    width: 220px;
+    height: 220px;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    transition: transform 0.4s;
+}
+
+.cover img:hover {
+    transform: scale(1.05);
+}
+
+/* Song Info */
+.info h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.info p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Progress Bar */
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 6px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(90deg, #1e90ff, #00c6ff);
+    border-radius: 10px;
+    transition: width 0.4s;
+}
+
+.progress-bar:hover .progress {
+    width: 70%;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.controls button {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 10px;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.controls button:hover {
+    transform: scale(1.2);
+    color: #1e90ff;
+}
+
+.controls .play {
+    background: #1e90ff;
+    color: white;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    font-size: 24px;
+}
+
+.controls .play:hover {
+    background: #006edc;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+    .player {
+        width: 90%;
+    }
+
+    .cover img {
+        width: 180px;
+        height: 180px;
+    }
+}
+
